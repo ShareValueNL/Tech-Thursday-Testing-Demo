@@ -9,7 +9,7 @@ public class DataRowUnitTests
 	[DataRow(4, 6, 10)]
 	public void DataRowAddTest(int a, int b, int expected)
 	{
-		int actual = a + b;
+		int actual = Calculator.Add(a, b);
 		actual.Should().Be(expected);
 	}
 }
