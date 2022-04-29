@@ -1,13 +1,10 @@
-using Xunit;
+namespace SV.Demo.Test.xUnit;
 
-namespace SV.Demo.Test.xUnit
+public class UnitTest1
 {
-    public class UnitTest1
+    [Fact]
+    public void Test1()
     {
-        [Fact]
-        public void Test1()
-        {
 
-        }
     }
 }
