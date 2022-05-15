@@ -1,0 +1,18 @@
+﻿@using SV.Demo.Blazor.Shared;
+
+@code
+{
+
+    [Fact]
+    public void HelloWorldComponentRendersCorrectly()
+    {
+        // Arrange
+        using var ctx = new TestContext();
+
+        // Act
+        var cut = ctx.Render(@<HelloWorld />);
+
+        // Assert
+        cut.MarkupMatches(@<h1>Hello world from Blazor</h1>);
+    }
+}

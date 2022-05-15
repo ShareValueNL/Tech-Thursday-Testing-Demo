@@ -1,0 +1,33 @@
+﻿@using SV.Demo.Blazor.Pages;
+@using FluentAssertions.BUnit;
+
+@inherits TestContext;
+
+@code
+{
+    [Fact]
+    public void InheritedCounterShouldIncrementWhenClicked()
+    {
+        // Arrange: render the Counter.razor component
+        var cut = RenderComponent<Counter>();
+
+        // Act: find and click the <button> element to increment
+        // the counter in the <p> element
+        cut.Find("button").Click();
+
+        // Assert: first find the <p> element, then verify its content
+        cut.Find("p").MarkupMatches(@<p role="status">Current count: 1</p>);
+
+        cut.Find("button").Click();
+        cut.Find("p").MarkupMatches(@<p role="status">Current count: 2</p>);
+
+    }
+
+    [Fact]
+    public void InheritedRenderWithChildContent()
+    {
+        Render(@<Button><h1>Test</h1></Button>)
+            .Should().HaveTag("button")
+            .And.HaveChildMarkup(@<h1>Test</h1>);
+    }
+}
