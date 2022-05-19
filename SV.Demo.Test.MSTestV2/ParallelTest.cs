@@ -18,7 +18,7 @@ namespace SV.Demo.Test.MSTestV2
             Thread.Sleep(3000);
         }
 
-        [TestMethod]
+        [Ignore]
         public void TestMethod3()
         {
             Thread.Sleep(3000);
@@ -29,5 +29,12 @@ namespace SV.Demo.Test.MSTestV2
         {
             Thread.Sleep(3000);
         }
+
+        [TestMethod]
+        public void TestMethod5()
+        {
+            Thread.Sleep(3000);
+        }
+
     }
 }

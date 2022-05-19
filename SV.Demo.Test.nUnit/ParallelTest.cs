@@ -19,7 +19,7 @@ public class ParallelTest
         Thread.Sleep(3000);
     }
 
-    [Test]
+    [Ignore("Overslaan")]
     public void TestMethod3()
     {
         Thread.Sleep(3000);
@@ -30,4 +30,24 @@ public class ParallelTest
     {
         Thread.Sleep(3000);
     }
+
+    [Test]
+    public void TestMethod5()
+    {
+        Thread.Sleep(3000);
+    }
+
+    [DebugOnly]
+    public void TestMethod6()
+    {
+        Thread.Sleep(3000);
+    }
+
+#if DEBUG
+    [Test]
+    public void TestMethod7()
+    {
+        Thread.Sleep(3000);
+    }
+#endif
 }
