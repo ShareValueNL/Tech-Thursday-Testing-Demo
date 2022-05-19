@@ -1,4 +1,4 @@
-﻿namespace SV.Demo.Test.nUnit.ExecutionExtensions;
+﻿namespace SV.Demo.Test.nUnit.RangeTest;
 
 [TestFixture]
 public class IterativeTest

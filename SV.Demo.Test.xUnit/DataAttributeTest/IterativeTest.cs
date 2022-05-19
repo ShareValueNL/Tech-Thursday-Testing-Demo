@@ -1,4 +1,4 @@
-﻿namespace SV.Demo.Test.xUnit.ExecutionExtensions;
+﻿namespace SV.Demo.Test.xUnit.DataAttributeTest;
 
 [Collection("Non-Parallel Collection")]
 public class IterativeTest

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Reflection;
 using Xunit.Sdk;
 
-namespace SV.Demo.Test.xUnit.ExecutionExtensions;
+namespace SV.Demo.Test.xUnit.DataAttributeTest;
 
 public sealed class IterativeTestMethodAttribute : DataAttribute
 {
@@ -16,8 +16,7 @@ public sealed class IterativeTestMethodAttribute : DataAttribute
         {
             throw new System.ArgumentOutOfRangeException(
                 paramName: nameof(count),
-                message: "Repeat count must be greater than 0."
-                );
+                message: "Repeat count must be greater than 0.");
         }
         this.count = count;
     }
